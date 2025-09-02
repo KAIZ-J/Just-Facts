@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Facts</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+     <script src="https://kit.fontawesome.com/9603c04a31.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button type="button" id="fav-page-btn" onclick="openPage()" title="Bookmarks"><img src="/assets/bookmarks_30dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+    <img src="/assets/sR-DXP8OTlSNF_u6t3OeiA-removebg-preview.png" alt="" id="logo">
+    <div class="container" id="container-main">
+      
+    </div>
+    <div id="action-btns">
+       <i class="fa-solid fa-heart like-btn" onclick="likeFact(this)"></i>
+       <i class="fa-solid fa-bookmark fav-btn" onclick="favFact(this)"></i>
+       <i class="fa-solid fa-share" onclick="shareFact()"></i>
+       <i class="fa-solid fa-copy" onclick="copyFact(this)"></i>
+    </div>
+    <div id="fav-page">
+         
+   <div class="container" id="container-favs"></div> <br>
+   <button type="button" id="close-page-btn" onclick="closePage()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+    </div>
+    <script src="script.js">
+       
+    </script>
+</body>
+</html>
