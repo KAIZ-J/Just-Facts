@@ -18,7 +18,6 @@
     let data = await response.json();
    if(data.text.length<100 && factsArray.some(el=>data.id===el.id)===false){
     data["isLiked"]=false;
-data["isFav"]=false;
 factsArray.push(data);
    }
    
@@ -60,18 +59,18 @@ addToContainer(factsArray);
             console.log(currentFactObj.isLiked)
         }
       }
-      function favFact(elem){
-        let fact  = document.getElementById(currentId);
-        if(fact!==null){      
-            let index = factsArray.findIndex(el=>el.id===currentId);
-             let index2 = favoriteFactsArray.findIndex(el=>el.id===currentId);
-            let currentFactObj = factsArray[index];
-            currentFactObj.isFav?currentFactObj.isFav=false:currentFactObj.isFav=true;
-            currentFactObj.isFav?elem.classList.add("faved"):elem.classList.remove("faved");
-            currentFactObj.isFav?favoriteFactsArray.push(currentFactObj):favoriteFactsArray.splice(index2,1)
-            console.log(favoriteFactsArray)
-        }
-      }
+      // function favFact(elem){
+      //   let fact  = document.getElementById(currentId);
+      //   if(fact!==null){      
+      //       let index = factsArray.findIndex(el=>el.id===currentId);
+      //        let index2 = favoriteFactsArray.findIndex(el=>el.id===currentId);
+      //       let currentFactObj = factsArray[index];
+      //       currentFactObj.isFav?currentFactObj.isFav=false:currentFactObj.isFav=true;
+      //       currentFactObj.isFav?elem.classList.add("faved"):elem.classList.remove("faved");
+      //       currentFactObj.isFav?favoriteFactsArray.push(currentFactObj):favoriteFactsArray.splice(index2,1)
+      //       console.log(favoriteFactsArray)
+      //   }
+      // }
      async function shareFact(){
          let fact  = document.getElementById(currentId);
         if(fact!==null){      
@@ -99,13 +98,13 @@ addToContainer(factsArray);
                setTimeout(()=>{elem.className="fa-solid fa-copy"},700)
       navigator.clipboard.writeText(currentFactObj.text)}
       }
-      function openPage(){
-        favPage.style.transform="translateX(0%)";
-         favPageContainer.innerHTML="";
-         favoriteFactsArray.forEach(el=>{
-        favPageContainer.innerHTML+=`<div class="fav-card" id="${el.id}">${el.text}</div>`
-    })
-      }
-      function closePage(){
-        favPage.style.transform="translateX(100%)"
-      }
+    //   function openPage(){
+    //     favPage.style.transform="translateX(0%)";
+    //      favPageContainer.innerHTML="";
+    //      favoriteFactsArray.forEach(el=>{
+    //     favPageContainer.innerHTML+=`<div class="fav-card" id="${el.id}">${el.text}</div>`
+    // })
+    //   }
+    //   function closePage(){
+    //     favPage.style.transform="translateX(100%)"
+    //   }

@@ -23,7 +23,7 @@
             font-family: poppins;
             scroll-snap-type: x mandatory;
             cursor: pointer;
-            
+            scroll-behavior: smooth;
             anchor-name: --container;
             border-radius: 30px;
         }
